@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:3333
+
+POST {{baseUrl}}/habits HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Exemplo de habito",
+    "weekDays": [0, 1, 2]
+}
+
+###
+@dateParam = 2023-01-02T14:00:00.000z
+
+GET {{baseUrl}}/day?date={{dateParam}} HTTP/1.1
